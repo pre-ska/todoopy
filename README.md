@@ -1,3 +1,3 @@
 ## Todo react app test
 
-[predrag-todoopy.netlify.com](demo)
+[demo](preska-todoopy.netlify.com)
