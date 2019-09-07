@@ -1,0 +1,29 @@
+@media only screen and (max-width: 1200px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 1.1rem;
+  font-family: "Quicksand", sans-serif;
+}
+body {
+  background: linear-gradient(90deg, #8ab4cf, #1c7ec0, #814e81);
+  /* background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db); */
+  /* font-size: 1.1rem;
+  font-family: "Quicksand", sans-serif; */
+  user-select: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background: #ff6666;
+    user-select: none;
+  }
+}
