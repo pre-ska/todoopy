@@ -7,7 +7,9 @@ const NewTodoForm = ({ create }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
+
     let value_ = value.trim();
+
     if (value_ !== "") {
       create(value_);
       reset();

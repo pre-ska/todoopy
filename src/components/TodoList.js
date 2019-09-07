@@ -19,17 +19,13 @@ const TodoList = () => {
       localStorage.setItem("todo_4", JSON.stringify(todos));
     }, 800);
 
-    return () => {
-      clearTimeout(timer);
-    };
+    return () => clearTimeout(timer);
   }, [todos]);
 
   const create = newTodo =>
     setTodos([{ task: newTodo, id: uuid(), completed: false }, ...todos]);
 
-  const remove = id => {
-    setTodos(todos.filter(t => t.id !== id));
-  };
+  const remove = id => setTodos(todos.filter(t => t.id !== id));
 
   const update = (id, updatedTask) =>
     setTodos(
@@ -48,11 +44,13 @@ const TodoList = () => {
       })
     );
   };
+
   let groupProps = {
     appear: true,
     enter: true,
     exit: true
   };
+
   return (
     <div className="TodoList">
       <a
@@ -85,7 +83,6 @@ const TodoList = () => {
           <TransitionGroup {...groupProps}>
             {todos.map((todo, i) => (
               <Todo
-                // className="todo"
                 key={todo.id}
                 i={i}
                 id={todo.id}
